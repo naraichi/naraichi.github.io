@@ -1,623 +1,433 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>MeetMe - Resume Website Template</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
-    <!-- Fonts -->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome.min.css">
-    <!-- Icon -->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/simple-line-icons.css">
-    <!-- Slicknav -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
-    <!-- Menu CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/menu_sideslide.css">
-    <!-- Slider CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slide-style.css">
-    <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
-    <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-    <!-- Main Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <!-- Responsive Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dev London | Technical Mastery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#0c1d2c",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "surface-variant": "#d4e4f9",
+                    "on-secondary-fixed-variant": "#454747",
+                    "secondary-container": "#dfe0e0",
+                    "inverse-on-surface": "#e8f2ff",
+                    "primary-fixed-dim": "#acc7ff",
+                    "primary": "#00306b",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#e9ae23",
+                    "on-background": "#0c1d2c",
+                    "surface-container-highest": "#d4e4f9",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface-dim": "#cbdcf0",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001a40",
+                    "surface-container-low": "#edf4ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#fabc33",
+                    "on-primary-fixed-variant": "#004492",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-tertiary-fixed": "#261900",
+                    "on-primary-container": "#94b7ff",
+                    "secondary": "#5d5f5f",
+                    "inverse-primary": "#acc7ff",
+                    "outline": "#737782",
+                    "on-surface-variant": "#434751",
+                    "surface-bright": "#f7f9ff",
+                    "primary-fixed": "#d7e2ff",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c3c6d3",
+                    "tertiary-container": "#5f4400",
+                    "on-secondary-container": "#616363",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#d9eaff",
+                    "surface-tint": "#2a5dac",
+                    "on-error": "#ffffff",
+                    "surface-container": "#e3efff",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface": "#f7f9ff",
+                    "inverse-surface": "#223241",
+                    "primary-container": "#034694",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#432f00",
+                    "background": "#f7f9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .pitch-pattern {
+            background-color: #f7f9ff;
+            background-image: radial-gradient(#d4e4f9 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
   </head>
-  <body>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-primary">
+<img alt="Dev London" class="w-full h-full object-cover" data-alt="A professional portrait of a male web developer with a clean-cut appearance, wearing a sharp royal blue polo shirt. The lighting is bright and studio-quality, emphasizing a modern corporate aesthetic. The background is a soft, out-of-focus modern office environment with hints of light blue and white tones, matching a prestigious technology firm atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn1kUFnXbI0TbS3eIuJqvG0tNyECdh918o9AsbWyHErAS8O-uoZ-rAQ53nm515EIcE_GTS1HunZahKheP0n3OlGABgAon1rpg36yLZt-Jee7_ywhbHVTVYagw8AyiR2ja-mHjyDxWLb5y3Y6_DrcjPuXla7pf7_hFTTr6fCHxeu4FjxL9_hlqceet_nkm5YMwks3vW75_Ic_hcKcjLjIelzLTiu-0LBngiBTYlIV_uzwt5GmwEQ9VGmRygkfQ82Ff-Uipumal8Vg"/>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold tracking-tighter text-primary">PRO DEV</span>
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold transition-all hover:text-primary active:opacity-70 active:scale-95" href="#home">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all" href="#experience">Pengalaman</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-all" href="#education">Edukasi</a>
+<a class="px-5 py-2 bg-primary text-white rounded-xl font-bold hover:bg-primary-container transition-all active:scale-95 shadow-sm" href="#contact">Kontak</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-16 pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="pitch-pattern relative py-section-gap px-margin-mobile overflow-hidden" id="home">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+<div class="flex-1 text-center md:text-left z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 border border-primary/20 rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-widest">Tersedia untuk Kontrak</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">
+                        Technical Mastery | <span class="text-primary-container">Pride of London</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto md:mx-0">
+                        Halo, saya <span class="font-bold text-on-surface">Dev London</span>. Pengembang Web Profesional yang membangun solusi digital berperforma tinggi dengan presisi teknik kelas juara.
+                    </p>
+<div class="flex flex-wrap justify-center md:justify-start gap-4">
+<a class="px-8 py-4 bg-primary text-on-primary rounded-xl font-bold flex items-center gap-2 hover:shadow-lg transition-all active:scale-95" href="#contact">
+                            Hubungi Saya
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="px-8 py-4 bg-on-tertiary-container text-on-surface rounded-xl font-bold border border-on-tertiary-container/30 hover:bg-on-tertiary-container/80 transition-all active:scale-95 shadow-sm" href="#">
+                            Unduh CV
+                        </a>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="relative w-full aspect-square max-w-md mx-auto">
+<!-- Decorative Shapes -->
+<div class="absolute -top-4 -right-4 w-32 h-32 bg-on-tertiary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 bg-white p-4 rounded-[2rem] shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 border border-outline-variant/30">
+<img alt="Workstation" class="rounded-[1.5rem] w-full h-full object-cover" data-alt="A clean, minimalist high-tech developer workstation setup. A MacBook Pro sits on a pristine white desk with a royal blue leather desk mat. There is a small, elegant Chelsea FC crest pennant in the background. The lighting is soft and natural, coming from a large window. The overall aesthetic is professional, organized, and high-end corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_ZRDpp4kXiPFBZuTZUzBK9l-atDdPjSc-rDVn1Tua_K8Cx9xff2UZx6VXTNnPYGye5cIFlwaZ4tc0dS2n2OZvs_rjN1dtfe1AfXYxEnnDKE5O5iEn9VC5WHX3cZFxK7fXoDk_ax1i5WPEQwWlwGzgozdg1uaT15Wsu8_39_L2bBi2uNxxLW4le8V4xlppF1Q4iwuikcQqzhWrRNgijfHZExqmRmvSMT6Tbbd36NNk3RyjdZ7xG_ZzohXc8JY5kgLskGkZDaSlEQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section (Bento Style) -->
+<section class="py-section-gap px-margin-mobile bg-surface-bright">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Technical Stack</h2>
+<div class="h-1 w-20 bg-on-tertiary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<div class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:border-primary transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">html</span>
+</div>
+<h3 class="font-bold text-on-surface">HTML5</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Struktur Semantik</p>
+</div>
+<div class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:border-primary transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">css</span>
+</div>
+<h3 class="font-bold text-on-surface">CSS3 / Tailwind</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Desain Responsif</p>
+</div>
+<div class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:border-primary transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">javascript</span>
+</div>
+<h3 class="font-bold text-on-surface">JavaScript</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">ES6+ &amp; TypeScript</p>
+</div>
+<div class="p-6 bg-white border border-outline-variant/30 rounded-xl hover:border-primary transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">deployed_code</span>
+</div>
+<h3 class="font-bold text-on-surface">React / Next.js</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Framework Modern</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="py-section-gap px-margin-mobile" id="experience">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-center gap-4 mb-12">
+<span class="material-symbols-outlined text-primary text-4xl">timeline</span>
+<h2 class="font-headline-md text-headline-md text-primary">Pengalaman Kerja</h2>
+</div>
+<div class="space-y-8 relative before:content-[''] before:absolute before:left-8 md:before:left-1/2 before:top-0 before:bottom-0 before:w-px before:bg-outline-variant/50">
+<!-- Exp Item 1 -->
+<div class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center w-full">
+<div class="md:w-5/12 ml-16 md:ml-0 order-2 md:order-1">
+<div class="p-6 bg-white rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all border-l-4 border-l-primary">
+<span class="font-label-sm text-label-sm text-primary font-bold">2021 - Sekarang</span>
+<h3 class="font-headline-sm text-headline-sm mt-1">Senior Web Developer</h3>
+<p class="text-primary font-medium mb-4">Blue Bridge Solutions</p>
+<p class="text-on-surface-variant">Memimpin pengembangan arsitektur frontend menggunakan React dan Node.js untuk platform e-commerce skala besar.</p>
+</div>
+</div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm z-10"></div>
+<div class="md:w-5/12 order-3"></div>
+</div>
+<!-- Exp Item 2 -->
+<div class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center w-full">
+<div class="md:w-5/12 order-1"></div>
+<div class="absolute left-6 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-on-tertiary-container border-4 border-white shadow-sm z-10"></div>
+<div class="md:w-5/12 ml-16 md:ml-0 order-2">
+<div class="p-6 bg-white rounded-xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all border-l-4 border-l-on-tertiary-container">
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed-variant font-bold">2018 - 2021</span>
+<h3 class="font-headline-sm text-headline-sm mt-1">Fullstack Developer</h3>
+<p class="text-primary font-medium mb-4">London Tech Hub</p>
+<p class="text-on-surface-variant">Membangun API RESTful dan antarmuka pengguna yang responsif untuk berbagai klien startup di industri fintech.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Achievements -->
+<section class="py-section-gap px-margin-mobile bg-on-surface text-white" id="education">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-12">
+<div>
+<h2 class="font-headline-md text-headline-md mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container">school</span>
+                        Pendidikan
+                    </h2>
+<div class="space-y-6">
+<div class="p-6 bg-white/5 rounded-xl border border-white/10">
+<h3 class="font-bold text-lg text-on-tertiary-container">Sarjana Ilmu Komputer</h3>
+<p class="text-white/80">Universitas Teknologi Jakarta</p>
+<span class="text-label-sm font-label-sm text-white/50">Lulus 2018 | IPK 3.85/4.00</span>
+</div>
+<div class="p-6 bg-white/5 rounded-xl border border-white/10">
+<h3 class="font-bold text-lg text-on-tertiary-container">Sertifikasi Cloud Architect</h3>
+<p class="text-white/80">AWS Certified Professional</p>
+<span class="text-label-sm font-label-sm text-white/50">Diterima 2022</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<div class="p-8 bg-primary-container rounded-2xl relative overflow-hidden">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-9xl text-white/10 opacity-30" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h2 class="font-headline-sm text-headline-sm text-white mb-4">Filosofi "Pride of London"</h2>
+<p class="text-white/90 leading-relaxed mb-6">
+                            Sama seperti Chelsea FC, saya percaya pada standar kualitas tertinggi dan dedikasi tanpa henti. Setiap baris kode yang saya tulis adalah komitmen terhadap performa, keindahan, dan integritas teknis.
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">trophy</span>
+</div>
+<span class="font-bold uppercase tracking-widest text-sm">Top Tier Technical Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile" id="contact">
+<div class="max-w-container-max mx-auto">
+<div class="bg-white rounded-[2rem] border border-outline-variant/30 shadow-xl overflow-hidden flex flex-col md:flex-row">
+<div class="md:w-1/2 p-8 md:p-12 bg-primary text-white">
+<h2 class="font-headline-md text-headline-md mb-4">Mari Berkolaborasi</h2>
+<p class="text-white/80 mb-12">Punya proyek menarik atau ingin mendiskusikan peluang kerja? Saya selalu terbuka untuk diskusi teknis.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="mailto:hello@devlondon.com">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-on-tertiary-container group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span>hello@devlondon.com</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-on-tertiary-container group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">share</span>
+</div>
+<span>linkedin.com/in/devlondon</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-on-tertiary-container group-hover:text-primary transition-all">
+<span class="material-symbols-outlined">code</span>
+</div>
+<span>github.com/devlondon</span>
+</a>
+</div>
+</div>
+<div class="md:w-1/2 p-8 md:p-12">
+<form class="space-y-6">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Nama Lengkap</label>
+<input class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Email</label>
+<input class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Pesan</label>
+<textarea class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Bagaimana saya bisa membantu Anda?" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-white rounded-xl font-bold hover:shadow-lg transition-all active:scale-95">Kirim Pesan</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface text-surface-bright pb-24 md:pb-8">
+<div class="flex flex-col items-center gap-4 px-margin-mobile py-8 w-full text-center max-w-container-max mx-auto">
+<h2 class="font-headline-sm text-headline-sm text-primary-fixed font-bold tracking-tighter">PRO DEV</h2>
+<p class="font-label-sm text-label-sm-mobile text-secondary-fixed-dim">© 2024 PRIDE OF LONDON | TECHNICAL MASTERY</p>
+<div class="flex gap-6 mt-4">
+<a class="text-secondary-fixed-dim hover:text-tertiary-fixed-dim underline transition-all duration-300" href="#">GitHub</a>
+<a class="text-secondary-fixed-dim hover:text-tertiary-fixed-dim underline transition-all duration-300" href="#">LinkedIn</a>
+<a class="text-secondary-fixed-dim hover:text-tertiary-fixed-dim underline transition-all duration-300" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface/90 backdrop-blur-md border-t border-outline-variant/20 shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="#home">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-all" href="#experience">
+<span class="material-symbols-outlined">work</span>
+<span class="font-label-sm text-[10px]">Work</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-all" href="#education">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-sm text-[10px]">School</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant/50 px-4 py-1 rounded-full transition-all" href="#contact">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-sm text-[10px]">Chat</span>
+</a>
+</nav>
+<script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    <!-- Header Area wrapper Starts -->
-    <header id="header-wrap">
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              <span class="icon-menu"></span>
-              <span class="icon-menu"></span>
-              <span class="icon-menu"></span>
-            </button>
-            <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
-          </div>
-          <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
-              <li class="nav-item active">
-                <a class="nav-link" href="#hero-area">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">
-                  About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">
-                  Services
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#resume">
-                  Resume
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolios">
-                  Work
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        // Intersection Observer for active state on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.md\\:flex a');
+        const mobileLinks = document.querySelectorAll('nav.md\\:hidden a');
 
-        <!-- Mobile Menu Start -->
-        <ul class="onepage-nev mobile-menu">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">about</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#resume">resume</a>
-          </li>
-          <li>
-            <a href="#portfolio">Work</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <!-- Mobile Menu End -->
-      </nav>
-      <!-- Navbar End -->
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-      <!-- Hero Area Start -->
-      <div id="hero-area" class="hero-area-bg">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 text-center">
-              <div class="contents">
-                <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
-                <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Tom Saulnier</h2>
-                <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Front-end Web Developer and Graphic Designer</p>
-                <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
-                  <li>
-                    <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a class="linkedin" href="#"><i class="icon-social-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a class="google" href="#"><i class="icon-social-google"></i></a>
-                  </li>
-                </ul>
-                <div class="header-button wow fadeInUp" data-wow-delay="1s">
-                  <a href="#" class="btn btn-common">Get a Free Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Hero Area End -->
+            // Update Desktop Nav
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold');
+                link.classList.add('text-on-surface-variant', 'font-medium');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-primary', 'font-bold');
+                    link.classList.remove('text-on-surface-variant', 'font-medium');
+                }
+            });
 
-    </header>
-    <!-- Header Area wrapper End -->
-
-    <!-- About Section Start -->
-    <section id="about" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-              <img class="img-fluid" src="assets/img/about/about-1.jpg" alt="">
-            </div>
-          </div> 
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
-              <h3>Hi Guys!</h3>
-              <p>Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis. Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna magnis. Elit ut sollicitudin. Et est a nam dolores eget itaque sagittis et parturient duis est eleifend sociis rutrum odio viverra integer.</p>
-              <div class="about-profile">
-                <ul class="admin-profile">
-                  <li><span class="pro-title"> Name </span> <span class="pro-detail">Tom Saulnier</span></li>
-                  <li><span class="pro-title"> Age </span> <span class="pro-detail">25 Years</span></li>
-                  <li><span class="pro-title"> Experience </span> <span class="pro-detail">4 Years</span></li>
-                  <li><span class="pro-title"> Country </span> <span class="pro-detail">USA</span></li>
-                  <li><span class="pro-title"> Location </span> <span class="pro-detail">San Francisco, CA</span></li>
-                  <li><span class="pro-title"> e-mail </span> <span class="pro-detail">email@example.com</span></li>
-                  <li><span class="pro-title"> Phone </span> <span class="pro-detail">+ (00) 123 456 789</span></li>
-                  <li><span class="pro-title"> Freelance </span> <span class="pro-detail">Available</span></li>
-                </ul>
-              </div>
-              <a href="#" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
-              <a href="#" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
-            </div>
-          </div>   
-        </div>
-      </div>
-    </section>
-    <!-- About Section End -->
-
-    <!-- Services Section Start -->
-    <section id="services" class="services section-padding">
-      <h2 class="section-title wow flipInX" data-wow-delay="0.4s">What I do</h2>
-      <div class="container">
-        <div class="row">
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-3 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
-              <div class="icon">
-                <i class="icon-grid"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Front-end Development</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-3 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="0.6s">
-              <div class="icon">
-                <i class="icon-layers"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Graphic Design</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-3 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="0.9s">
-              <div class="icon">
-                <i class="icon-briefcase"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Business Branding</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-3 col-xs-12">
-            <div class="services-item wow fadeInDown" data-wow-delay="1.2s">
-              <div class="icon">
-                <i class="icon-bubbles"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Consultancy</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condi.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services Section End -->
-
-    <!-- Resume Section Start -->
-    <div id="resume" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="education wow fadeInRight" data-wow-delay="0.3s">
-              <ul class="timeline">
-                <li>
-                  <i class="icon-graduation"></i>
-                  <h2 class="timelin-title">Education</h2>
-                </li>
-                <li>
-                  <div class="content-text">
-                    <h3 class="line-title">Bsc In CSE - Yale University</h3>
-                    <span>2012 - 2016</span>
-                    <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="content-text">
-                    <h3 class="line-title">Higher Secondary School - San Francisco College</h3>
-                    <span>2010 - 2012</span>
-                    <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="content-text">
-                    <h3 class="line-title">Secondary School - Labratory High School</h3>
-                    <span>2005 - 2010</span>
-                    <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="experience wow fadeInRight" data-wow-delay="0.6s">
-              <ul class="timeline">
-                <li>
-                  <i class="icon-briefcase"></i>
-                  <h2 class="timelin-title">Experience</h2>
-                </li>
-                <li>
-                  <div class="content-text">
-                    <h3 class="line-title">Art Director - Tesla Inc.</h3>
-                    <span>Jan 2018 - Present</span>
-                    <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="content-text">
-                    <h3 class="line-title">UX/UI Designer - Samsung</h3>
-                    <span>Nov 2016 - Dec 2017</span>
-                    <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="content-text">
-                    <h3 class="line-title">Intern UI Designer - UIdeck</h3>
-                    <span>Mar 2015 - Oct 2016</span>
-                    <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Resume Section End -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolios" class="section-padding">
-      <!-- Container Starts -->
-      <div class="container">        
-        <h2 class="section-title wow flipInX" data-wow-delay="0.4s">My Remarkable Works</h2>
-        <div class="row">          
-          <div class="col-md-12">
-            <!-- Portfolio Controller/Buttons -->
-            <div class="controls text-center">
-              <a class="filter active btn btn-common" data-filter="all">
-                All 
-              </a>
-              <a class="filter btn btn-common" data-filter=".design">
-                Design 
-              </a>
-              <a class="filter btn btn-common" data-filter=".development">
-                Development
-              </a>
-              <a class="filter btn btn-common" data-filter=".print">
-                Print 
-              </a>
-            </div>
-            <!-- Portfolio Controller/Buttons Ends-->
-          </div>
-
-          <!-- Portfolio Recent Projects -->
-          <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
-              <div class="portfolio-item">
-                <div class="shot-item">
-                  <img src="assets/img/gallery/img-1.jpg" alt="" />  
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="assets/img/gallery/img-1.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix design print">
-              <div class="portfolio-item">
-                <div class="shot-item">
-                  <img src="assets/img/gallery/img-2.jpg" alt=""/> 
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="assets/img/gallery/img-2.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
-              <div class="portfolio-item">
-                <div class="shot-item">
-                  <img src="assets/img/gallery/img-3.jpg" alt=""/> 
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="assets/img/gallery/img-3.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development design">
-              <div class="portfolio-item">
-                <div class="shot-item">
-                  <img src="assets/img/gallery/img-4.jpg" alt="" /> 
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="assets/img/gallery/img-4.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
-              <div class="portfolio-item">
-                <div class="shot-item">
-                  <img src="assets/img/gallery/img-5.jpg" alt="" /> 
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="assets/img/gallery/img-5.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print design">
-              <div class="portfolio-item">
-                <div class="shot-item">
-                  <img src="assets/img/gallery/img-6.jpg" alt=""/>
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="assets/img/gallery/img-6.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Container Ends -->
-    </section>
-    <!-- Portfolio Section Ends --> 
-
-    <!-- Counter Area Start-->
-    <section class="counter-section section-padding">
-      <div class="container">
-        <div class="row">
-          <!-- Counter Item -->
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.3s">
-              <div class="icon"><i class="icon-briefcase"></i></div>
-              <div class="counterUp">250</div>
-              <p>Project Working</p>
-            </div>
-          </div>
-          <!-- Counter Item -->
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.6s">
-              <div class="icon"><i class="icon-check"></i></div>
-              <div class="counterUp">950</div>
-              <p>Project Done</p>
-            </div>
-          </div>
-          <!-- Counter Item -->
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="0.9s">
-              <div class="icon"><i class="icon-diamond"></i></div>
-              <div class="counterUp">150</div>
-              <p>Awards Received</p>
-            </div>
-          </div>
-          <!-- Counter Item -->
-          <div class="col-md-3 col-sm-6 work-counter-widget text-center">
-            <div class="counter wow fadeInDown" data-wow-delay="1.2s">
-              <div class="icon"><i class="icon-heart"></i></div>
-              <div class="counterUp">299</div>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Counter Area End-->
-
-    <!-- Contact Section Start -->
-    <section id="contact" class="section-padding">      
-      <div class="contact-form">
-        <div class="container">
-          <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">          
-            <div class="col-md-6 col-lg-6 col-sm-12">
-              <div class="contact-block">
-                <h2>Contact Form</h2>
-                <form id="contactForm">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
-                        <div class="help-block with-errors"></div>
-                      </div>                                 
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
-                        <div class="help-block with-errors"></div>
-                      </div> 
-                    </div>
-                     <div class="col-md-12">
-                      <div class="form-group">
-                        <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group"> 
-                        <textarea class="form-control" id="message" placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
-                        <div class="help-block with-errors"></div>
-                      </div>
-                      <div class="submit-button">
-                        <button class="btn btn-common" id="submit" type="submit">Send Message</button>
-                        <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                        <div class="clearfix"></div> 
-                      </div>
-                    </div>
-                  </div>            
-                </form>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-12">
-              <div class="footer-right-area wow fadeIn">
-                <h2>Contact Address</h2>
-                <div class="footer-right-contact">
-                  <div class="single-contact">
-                    <div class="contact-icon">
-                      <i class="fa fa-map-marker"></i>
-                    </div>
-                    <p>San Francisco, CA</p>
-                  </div>
-                  <div class="single-contact">
-                    <div class="contact-icon">
-                      <i class="fa fa-envelope"></i>
-                    </div>
-                    <p><a href="mailto:hello@tom.com">hello@tom.com</a></p>
-                    <p><a href="mailto:tomsaulnier@gmail.com">tomsaulnier@gmail.com</a></p>
-                  </div>
-                  <div class="single-contact">
-                    <div class="contact-icon">
-                      <i class="fa fa-phone"></i>
-                    </div>
-                    <p><a href="#">+ (00) 123 456 789</a></p>
-                    <p><a href="#">+ (00) 123 344 789</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-            <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
-            </div>
-          </div>
-        </div>
-      </div>   
-    </section>
-    <!-- Contact Section End -->
-
-    <!-- Footer Section Start -->
-    <footer class="footer-area section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
-              <ul class="social-icon">
-                <li>
-                  <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
-                </li>
-                <li>
-                  <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-linkedin"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-google"></i></a>
-                </li>
-              </ul>
-              <p>Copyright © 2018 UIdeck All Right Reserved</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer Section End -->
-
-    <!-- Go to Top Link -->
-    <a href="#" class="back-to-top">
-      <i class="icon-arrow-up"></i>
-    </a>
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/jquery-min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.mixitup.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/jquery.nav.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>  
-    <script src="assets/js/nivo-lightbox.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/form-validator.min.js"></script>
-    <script src="assets/js/contact-form-script.min.js"></script>
-    <script src="assets/js/map.js"></script>
-      
-  </body>
-</html>
+            // Update Mobile Nav
+            mobileLinks.forEach(link => {
+                link.classList.remove('bg-primary-container', 'text-on-primary-container');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('bg-primary-container', 'text-on-primary-container');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+</body></html>
